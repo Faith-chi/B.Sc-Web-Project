@@ -1,0 +1,39 @@
+* {
+    color: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    padding-left: 10px;
+}
+.divi {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 20px;
+}
+
+.SignIn-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid;
+    padding: 20px;
+} 

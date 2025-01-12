@@ -1,0 +1,253 @@
+body {
+    height: 100vh;
+    /* position: relative; */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    font-weight: bolder;
+    padding: 5px;
+}
+
+#main_div {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    border: 5px red dotted;
+    padding-top: 15px;
+    box-sizing: border-box;
+    margin-top: none;
+}
+.nav-bar-links a{
+    text-decoration: none;
+    padding-right: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+}
+
+.rhs a{
+    text-decoration: none;
+    padding-right: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+}
+
+
+.signup a{
+    color: #fff;
+    background-color: #5C4033;
+    padding: 0.5rem 1rem;
+    border: 2px solid #FFA500;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    display: inline;
+}
+
+#nav-bar {
+     /* position: fixed; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: #5C4033; */
+    width: 100%;
+    padding: 10px;
+}
+
+#first-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.brown-txt {
+    color: #5C4033;
+}
+.yellow-txt {
+   color: #FFA500;
+}
+
+#imgs {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.image-container {
+    /* background-color: #bababa;  */
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.3rem;
+
+}
+
+.img1 {
+    background: url(../assests/images/dog\ 1.jpeg);
+    background-size: contain;
+    border-radius: 0.3rem;
+    width: 10rem;
+    height: 19.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 0.5rem;
+
+}
+
+.img1::before {
+    content: "";
+    position: absolute;
+    background-color: #FFA500;
+    width: 90%;
+    height: 104%;
+    z-index: -1;
+    top: -0.8rem;
+    left: -0.2rem;
+    
+}
+
+.img2 {
+    background: url(../assests/images/dog\ 2.jpeg);
+    background-size: contain;
+    border-radius: 0.3rem;
+    width: 10rem;
+    height: 22.5rem;
+    background-repeat: no-repeat;
+    background-position: -2rem;
+    background-size: cover;
+}
+
+#content {
+    /* border: 5px solid purple; */
+    margin-top:0%;
+    height: 350px;
+    background-image: url("Images/dog and hand.jpeg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+}
+
+#main_design {
+    width: Fixed (1,440px)px;
+    height: Fixed (794px)px;
+    top: 90px;
+    left: 14px;
+    padding: 75px var(--Spacingspacing-3xl) 75px var(--Spacingspacing-3xl);
+    gap: 10px;
+    opacity: 0px;
+}
+
+/* Body signup buttons  */
+#main_design .signup{
+    color: #fff;
+    background-color: #5C4033;
+    padding: 0.5rem 2rem;
+    border: 2px solid #FFA500;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#main_design .login {
+    /* color: #fff; */
+    background-color: #fff;
+    padding: 0.5rem 2rem;
+    border: 2px solid #FFA500;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.row-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  section.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+.stats, .details {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+  }
+  
+  /* Stats Section */
+.stats-numbers {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+.stat {
+    text-align: center;
+  }
+  
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f4a81c;
+  }
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#FAQ-Container {
+    border: 2px solid black;
+    max-width: 50%;
+    min-width: 50%;
+    border-radius: 20px;
+}
+
+.footer {
+    background-color: #5C4033;
+    position: absolute;
+    /* bottom: 10; */
+    left: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
