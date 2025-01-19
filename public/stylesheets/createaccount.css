@@ -1,0 +1,158 @@
+body {
+    align-content: center;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: #5C4033; */
+    width: 100%;
+    padding: 10px;
+ }
+ 
+ #nav-bar ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ li {
+     display: inline;
+ }
+ 
+ .nav-bar-links a{
+     text-decoration: none;
+     padding-right: 10px;
+     font-family: Inter;
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 24px;
+     text-align: left;
+     color: #000;
+ }
+ 
+ .rhs a{
+     text-decoration: none;
+     padding-right: 10px;
+     font-family: Inter;
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 24px;
+     text-align: left;
+     color: #000;
+ }
+ 
+ .signup a{
+     color: #fff;
+     background-color: #5C4033;
+     padding: 0.5rem 1rem;
+     border: 2px solid #FFA500;
+     border-radius: 1rem;
+     text-decoration: none;
+     font-weight: 200;
+ }
+
+ .progress-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0 10px;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .progress-indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 0;
+  }
+  
+  .step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Ensures it appears above the line */
+  }
+  
+  .step .number {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    transition: all 0.3s ease;
+  }
+  
+  .step .label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .step.active .number {
+    border-color: #9c602e; /* Highlighted border color */
+    background-color: #9c602e;
+    color: #fff; /* Number color */
+  }
+  
+  .step.active .label {
+    color: #9c602e; /* Highlighted text color */
+  }
+  
+  .step.completed .number {
+    border-color: #27ae60; /* Green for completed step */
+    background-color: #27ae60;
+    color: #fff;
+  }
+  
+  .step.completed .label {
+    color: #27ae60;
+  }
+  
+  /* Highlight the completed section of the line */
+  .progress-indicator::before {
+    background: linear-gradient(to right, #27ae60 33%, #ddd 33%);
+  }
+
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: bisque;
+    padding: 20px;
+}
+
+.create-account, .pet-details {
+    border: 1px;
+    border-radius: 2px;
+}
+
+h2 {
+    color:sienna;
+}
+
+input {
+    width: 100%;
+}
+
+.create-account {
+  
+}

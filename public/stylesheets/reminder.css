@@ -1,0 +1,67 @@
+.reminder {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .pet-card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .status.approved {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .symptoms button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .symptoms button:hover {
+    background-color: #ddd;
+  }
+  
+  .countdown {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .time-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+
+
+    & > span{
+        font-size: 12px;
+    }
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+

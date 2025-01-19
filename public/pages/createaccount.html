@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create Account</title>
+        <link rel="stylesheet" href="../stylesheets/createaccount.css">
+        <script src="../../src/scripts/createaccount.js"></script>
+    </head>
+    <body>
+        <div class="body-container">
+            <section>
+                <div id="nav-bar">
+                    <div>
+                        <ul>
+                            <div class="nav-bar-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Appointment</a></li>
+                                <li><a href="#">Reminders</a></li>
+                                <li><a href="#">Vaccination</a></li>
+                                <li><a href="#">Health Resources</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="rhs">
+                        <ul>
+                            <li><a href="#">contact sales</a></li>
+                            <li><a href="#">log in</a></li>
+                            <li>
+                                <div class="signup">
+                                    <a href="#" class="signup"> sign up free</a>
+                                </div>
+                            </li>
+                    </ul>
+                    </div>
+                </div>
+                </section>
+                <section>
+                    <div class="progress-indicator">
+                        <div class="step completed">
+                            <span class="number">1</span>
+                            <span class="label">Account Type</span>
+                        </div>
+                        <div class="step active">
+                            <span class="number">2</span>
+                            <span class="label">Personal information</span>
+                        </div>
+                        <div class="step">
+                            <span class="number">3</span>
+                            <span class="label">Profile Data</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-container">
+                    <form action="" class="create-account">
+                            <h2>Create Account</h2>
+                            <p>Please fill out this form with the required information</p>
+                            
+                            <label>
+                              <input type="radio" name="accountType" value="singlePet">
+                              Single Pet
+                            </label>
+                            
+                            <label>
+                              <input type="radio" name="accountType" value="breeder">
+                              I'm a Breeder
+                            </label>
+                            
+                            <div class="navigation-buttons">
+                              <button type="button" id="prev">Previous</button>
+                              <button type="button" id="next">Next</button>
+                            </div>
+                    </form>
+                    
+                    <form action="" class="pet-details">
+                        <h2>Pet Details</h2>
+                        <p>please fill out this form with the required information</p>
+                        <label for="">Name</label><br>
+                        <input type="text" placeholder="Jimmy"><br>
+                        <label for="">Age</label><br>
+                        <input type="text" placeholder="1"><br>
+                        <label for="">Breed</label><br>
+                        <input type="text" placeholder="Cane Corso"><br>
+
+                        <div class="navigation-buttons">
+                            <button type="button" id="prev">Previous</button>
+                            <button type="button" id="next">Next</button>
+                          </div>
+                    </form>
+                    </div>
+                </section>
+                <section class="footer"></section>
+        </div>
+    </body>
+</html>
