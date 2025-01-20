@@ -1,93 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Create Account</title>
-        <link rel="stylesheet" href="../stylesheets/createaccount.css">
-        <script src="../../src/scripts/createaccount.js"></script>
-    </head>
-    <body>
-        <div class="body-container">
-            <section>
-                <div id="nav-bar">
-                    <div>
-                        <ul>
-                            <div class="nav-bar-links">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Appointment</a></li>
-                                <li><a href="#">Reminders</a></li>
-                                <li><a href="#">Vaccination</a></li>
-                                <li><a href="#">Health Resources</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="rhs">
-                        <ul>
-                            <li><a href="#">contact sales</a></li>
-                            <li><a href="#">log in</a></li>
-                            <li>
-                                <div class="signup">
-                                    <a href="#" class="signup"> sign up free</a>
-                                </div>
-                            </li>
-                    </ul>
-                    </div>
+  <head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../stylesheets/createaccount.css" />
+    <script src="../../src/scripts/createaccount.js"></script>
+  </head>
+  <body>
+    <div class="body-container">
+      <section>
+        <div id="nav-bar">
+          <div>
+            <ul>
+              <div class="nav-bar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Appointment</a></li>
+                <li><a href="#">Reminders</a></li>
+                <li><a href="#">Vaccination</a></li>
+                <li><a href="#">Health Resources</a></li>
+              </div>
+            </ul>
+          </div>
+          <div class="rhs">
+            <ul>
+              <li><a href="#">contact sales</a></li>
+              <li><a href="#">log in</a></li>
+              <li>
+                <div class="signup">
+                  <a href="#" class="signup"> sign up free</a>
                 </div>
-                </section>
-                <section>
-                    <div class="progress-indicator">
-                        <div class="step completed">
-                            <span class="number">1</span>
-                            <span class="label">Account Type</span>
-                        </div>
-                        <div class="step active">
-                            <span class="number">2</span>
-                            <span class="label">Personal information</span>
-                        </div>
-                        <div class="step">
-                            <span class="number">3</span>
-                            <span class="label">Profile Data</span>
-                        </div>
-                    </div>
-                    
-                    <div class="form-container">
-                    <form action="" class="create-account">
-                            <h2>Create Account</h2>
-                            <p>Please fill out this form with the required information</p>
-                            
-                            <label>
-                              <input type="radio" name="accountType" value="singlePet">
-                              Single Pet
-                            </label>
-                            
-                            <label>
-                              <input type="radio" name="accountType" value="breeder">
-                              I'm a Breeder
-                            </label>
-                            
-                            <div class="navigation-buttons">
-                              <button type="button" id="prev">Previous</button>
-                              <button type="button" id="next">Next</button>
-                            </div>
-                    </form>
-                    
-                    <form action="" class="pet-details">
-                        <h2>Pet Details</h2>
-                        <p>please fill out this form with the required information</p>
-                        <label for="">Name</label><br>
-                        <input type="text" placeholder="Jimmy"><br>
-                        <label for="">Age</label><br>
-                        <input type="text" placeholder="1"><br>
-                        <label for="">Breed</label><br>
-                        <input type="text" placeholder="Cane Corso"><br>
-
-                        <div class="navigation-buttons">
-                            <button type="button" id="prev">Previous</button>
-                            <button type="button" id="next">Next</button>
-                          </div>
-                    </form>
-                    </div>
-                </section>
-                <section class="footer"></section>
+              </li>
+            </ul>
+          </div>
         </div>
-    </body>
+      </section>
+      <section>
+        <div class="progress-indicator">
+          <div class="step completed">
+            <span class="number">1</span>
+            <span class="label">Account Type</span>
+          </div>
+          <div class="step active">
+            <span class="number">2</span>
+            <span class="label">Personal information</span>
+          </div>
+          <div class="step">
+            <span class="number">3</span>
+            <span class="label">Profile Data</span>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form action="" id="createAccount" class="create-account">
+            <div class="card-header">
+              <h2>Create Account</h2>
+            </div>
+            <div class="card-info-div">
+              <p>Please fill out this form with the required information</p>
+            </div>
+
+            <div class="card-input-list">
+              <ul>
+                <li>
+                  <label for="singlepet-option"> Single pet </label>
+                  <input
+                    type="checkbox"
+                    id="singlepet-option"
+                    name="accountType"
+                    value="singlePet"
+                    onclick="onlyOne(this)"
+                  />
+                </li>
+                    <!-- <svg width="206" height="202" viewBox="0 0 206 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M144.829 33.9228C144.829 33.9228 130.846 69.6064 185.163 102.478C233.402 131.671 184.154 180.578 156.247 188.717C120.096 199.259 79.8019 167.502 61.4882 193.625C43.1746 219.747 -12.4878 173.017 12.7052 132.219C44.044 81.4692 6.69644 80.6852 0.443621 58.5792C-4.04408 42.7138 26.1646 -1.01097 61.7156 12.6904C91.6312 24.2196 96.9668 11.8077 104.14 4.49831C114.486 -6.04383 152.717 1.22945 144.829 33.9228Z" fill="#D4D4D8"/>
+                        <path d="M83.7942 151.776C74.7618 151.366 64.4977 140.554 69.014 137.681C73.5302 134.807 72.9827 128.785 71.3405 127.965C61.2133 123.996 58.7499 115.1 56.5603 103.742C54.3707 92.3826 55.6022 56.2535 55.6022 56.2535L68.3297 49.8214L103.501 47.7686L113.491 64.3279C113.491 64.3279 109.829 74.2143 109.523 84.1059C111.92 82.19 116.108 79.5515 119.239 81.4346C121.264 82.6498 122.485 84.5493 123.005 86.6734C123.678 89.4268 123.169 92.5689 121.702 95.12C120.684 96.8935 119.49 98.662 117.837 100.02C115.499 101.941 112.237 103.031 107.206 102.144C107.409 104.843 112.67 104.958 112.67 107.711C112.67 110.311 112.572 114.28 112.67 115.786C113.491 128.102 120.197 132.345 123.618 136.451C127.039 140.556 92.8266 152.187 83.7942 151.776Z" fill="#AAAAAA"/>
+                        <path d="M57.6571 100.867C63.1738 100.867 67.6459 96.0037 67.6459 90.005C67.6459 84.0064 63.1738 79.1436 57.6571 79.1436C52.1404 79.1436 47.6682 84.0064 47.6682 90.005C47.6682 96.0037 52.1404 100.867 57.6571 100.867Z" fill="#6E6E6E"/>
+                        <path d="M57.6566 98.7138C62.1151 98.7138 65.7294 94.8148 65.7294 90.0051C65.7294 85.1954 62.1151 81.2964 57.6566 81.2964C53.1981 81.2964 49.5837 85.1954 49.5837 90.0051C49.5837 94.8148 53.1981 98.7138 57.6566 98.7138Z" fill="#D4E5FF"/>
+                        <path d="M84 101.687C89.3286 101.687 93.6483 97.1533 93.6483 91.5603C93.6483 85.9672 89.3286 81.4331 84 81.4331C78.6715 81.4331 74.3518 85.9672 74.3518 91.5603C74.3518 97.1533 78.6715 101.687 84 101.687Z" fill="#6E6E6E"/>
+                        <path d="M83.9996 100.114C88.2415 100.114 91.6802 96.2847 91.6802 91.5608C91.6802 86.8368 88.2415 83.0073 83.9996 83.0073C79.7578 83.0073 76.3191 86.8368 76.3191 91.5608C76.3191 96.2847 79.7578 100.114 83.9996 100.114Z" fill="#D4E5FF"/>
+                        <path d="M67.1651 86.6722C67.1651 86.6722 72.1268 84.7863 75.3947 88.3445C75.3947 88.9605 74.899 90.0052 74.899 90.0052C74.899 90.0052 70.5162 86.5654 67.1651 89.1652C66.6193 88.089 66.2905 86.9221 67.1651 86.6722Z" fill="#6E6E6E"/>
+                        <path d="M92.8364 88.9181L109.371 83.0073L109.213 84.4706L93.3649 91.0926L92.8364 88.9181Z" fill="#6E6E6E"/>
+                        <path d="M25.6699 161.781C25.3049 160.79 25.1616 159.731 25.25 158.678C25.3383 157.626 25.6562 156.605 26.1813 155.689L30.4215 148.219C30.4215 148.219 30.9689 145.299 43.377 143.566C55.785 141.832 67.7218 138.714 69.0143 137.681C69.0143 137.681 90.9397 156.515 123.222 135.99C123.222 135.99 149.575 150.864 155.597 151.412C159.134 151.734 161.884 158.698 163.551 164.39C163.828 165.335 163.907 166.326 163.785 167.303C163.663 168.28 163.341 169.221 162.84 170.069C162.339 170.916 161.669 171.651 160.873 172.23C160.076 172.808 159.169 173.216 158.207 173.429C131.565 179.355 38.9194 197.177 25.6699 161.781Z" fill="#5C4033"/>
+                        <path d="M117.838 100.019C114.713 107.458 112.578 110.589 110.071 110.31C107.454 110.02 106.627 105.788 106.802 102.066C112.063 103.09 115.441 101.989 117.838 100.019Z" fill="#222222"/>
+                        <path d="M123.072 86.497C123.05 86.5572 123.028 86.6174 123.006 86.6723C122.486 84.5482 121.265 82.6487 119.24 81.4335C116.027 79.5015 111.697 82.3312 109.332 84.2636C109.781 75.6473 109.026 65.8978 104.323 63.7793C96.112 60.0842 95.7781 60.9054 90.6762 61.1791C85.8862 61.4363 74.1441 62.1753 72.1517 61.0203C73.4654 62.2523 79.6677 67.54 89.5594 68.0218C90.6762 68.8429 89.9535 69.5272 88.8594 69.3902C87.7653 69.2533 72.8475 68.9798 61.6255 54.8837C61.6255 54.8837 55.1167 67.0583 55.259 78.0117C55.259 78.0117 51.087 69.8004 53.6879 58.0309C55.259 49.2724 59.299 50.0929 59.299 50.0929C59.299 50.0929 56.5607 30.5237 75.3096 32.3028C80.7836 32.9872 90.0899 41.0615 96.3851 40.9246C102.68 40.7877 108.428 41.1984 108.428 41.1984C108.428 41.1984 117.324 39.8298 118.829 51.873C118.894 54.2974 120.645 55.39 125.398 55.9787C130.298 56.5853 129.504 69.2535 123.072 86.497Z" fill="#222222"/>
+                        <path d="M167.832 190.567C180.417 190.567 190.619 180.366 190.619 167.781C190.619 155.196 180.417 144.995 167.832 144.995C155.248 144.995 145.046 155.196 145.046 167.781C145.046 180.366 155.248 190.567 167.832 190.567Z" fill="#6E6E6E" stroke="white" stroke-width="15" stroke-miterlimit="10"/>
+                        <path d="M176.611 165.873H170.123C170.073 165.873 170.023 165.863 169.977 165.844C169.93 165.824 169.888 165.796 169.853 165.761C169.817 165.725 169.789 165.683 169.77 165.637C169.751 165.591 169.741 165.541 169.741 165.491V159.002C169.737 158.499 169.534 158.018 169.176 157.664C168.819 157.309 168.336 157.11 167.833 157.11C167.329 157.11 166.846 157.309 166.489 157.664C166.131 158.018 165.928 158.499 165.924 159.002V165.491C165.924 165.592 165.884 165.689 165.812 165.761C165.741 165.832 165.644 165.873 165.543 165.873H159.054C158.548 165.873 158.063 166.074 157.705 166.432C157.347 166.789 157.146 167.275 157.146 167.781C157.146 168.287 157.347 168.772 157.705 169.13C158.063 169.488 158.548 169.689 159.054 169.689H165.543C165.593 169.689 165.642 169.699 165.689 169.718C165.735 169.738 165.777 169.766 165.812 169.801C165.848 169.837 165.876 169.879 165.895 169.925C165.914 169.971 165.924 170.021 165.924 170.071V176.56C165.928 177.063 166.131 177.545 166.489 177.899C166.846 178.253 167.329 178.452 167.833 178.452C168.336 178.452 168.819 178.253 169.176 177.899C169.534 177.545 169.737 177.063 169.741 176.56V170.071C169.741 170.021 169.751 169.971 169.77 169.925C169.789 169.879 169.817 169.837 169.853 169.801C169.888 169.766 169.93 169.738 169.977 169.718C170.023 169.699 170.073 169.689 170.123 169.689H176.611C177.117 169.689 177.603 169.488 177.96 169.13C178.318 168.772 178.519 168.287 178.519 167.781C178.519 167.275 178.318 166.789 177.96 166.432C177.603 166.074 177.117 165.873 176.611 165.873Z" fill="white"/>
+                    </svg>     -->
+                    
+                <li>
+                  <label for="multiplepet-option">
+                    I have more than one pet
+                  </label>
+                  <input
+                    type="checkbox"
+                    id="multiplepet-option"
+                    name="accountType"
+                    value="multiplePet"
+                    onclick="onlyOne(this)"
+                  />
+                </li>
+                <li>
+                  <label for="breader-option"> I'm a Breader </label>
+                  <input
+                    type="checkbox"
+                    id="breader-option"
+                    name="accountType"
+                    value="breaderPet"
+                    onclick="onlyOne(this)"
+                  />
+                </li>
+              </ul>
+            </div>
+
+            <div class="navigation-buttons">
+              <button type="button" id="prev">Previous</button>
+              <button type="button" id="next" onclick="nextBtnClick()" >Next</button>
+            </div>            
+            <script>
+                function onlyOne(checkbox) { const checkboxes = document.getElementsByName('accountType');
+                    checkboxes.forEach((item) => {
+                        if (item !== checkbox) item.checked = false
+                    });
+                }
+
+                function nextBtnClick() {
+                    const nextButton = document.getElementById('next');
+                    const createAccountCard = document.getElementById('createAccount');
+                    const petDetailsCard = document.getElementById('petDetails');
+
+                    // Event listeners for navigation buttons
+                    //   if (currentStep < steps.length) {
+                    //     currentStep++;
+                    //     updateProgress();
+                    //   }
+                    createAccountCard.classList.replace('create-account', 'create-account-unrendered');
+                    petDetailsCard.classList.replace('pet-details', 'pet-details-rendered');
+
+                    console.log('sjwuihywkiowkjjn');
+
+                }
+                
+                function prevBtnClick() {
+
+                    const prevButton = document.getElementById('pet-prev');
+                    const createAccountCard = document.getElementById('createAccount');
+                    const petDetailsCard = document.getElementById('petDetails');
+
+                    
+                    createAccountCard.classList.replace('create-account-unrendered', 'create-account');
+                    petDetailsCard.classList.replace('pet-details-rendered', 'pet-details');
+
+                }
+
+            </script>
+          </form>
+
+          <form action="" id="petDetails" class="pet-details">
+            <div class="pet-card-header" >
+                <h2>Pet Details</h2>
+            </div>
+            <div class="pet-card-info-div">
+                <p>please fill out this form with the required information</p>
+            </div>
+            <div class="pet-card-input-list">
+                <ul>
+                    <li>
+                        <label for="pet-name">Name</label><br />
+                        <input type="text" placeholder="Jimmy" id="pet-name" /><br />
+                    </li>
+                    <li>
+                        <label for="">Age</label><br />
+                        <input type="text" id="pet-age" placeholder="1" /><br />
+                    </li>
+                    <li>
+                        <label for="">Breed</label><br />
+                        <input type="text" id="pet-breed" placeholder="Cane Corso" /><br />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation-buttons">
+              <button type="button" id="pet-prev" onclick="prevBtnClick()">Previous</button>
+              <button type="button" id="next">Next</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="footer"></section>
+    </div>
+  </body>
 </html>

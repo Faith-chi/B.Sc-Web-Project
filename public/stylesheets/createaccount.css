@@ -136,7 +136,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: bisque;
+    background: #ededed;
     padding: 20px;
 }
 
@@ -147,6 +147,8 @@ body {
 
 h2 {
     color:sienna;
+    margin: 0px;
+    font-size: 30px;
 }
 
 input {
@@ -154,5 +156,68 @@ input {
 }
 
 .create-account {
+  background: white;
+  display: flex;
+  padding: 45px 0px 45px 0px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 0px rgba(0, 0, 0, .05), 0 2px 8px 5px rgba(0, 0, 0, .09);
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.create-account-unrendered{
+  background: #ededed;
+  display: flex;
+  padding: 45px 35px 45px 35px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 0px rgba(0, 0, 0, .05), 0 2px 8px 5px rgba(0, 0, 0, .09);
+  gap: 10px;
+  border-radius: 20px;
+  opacity: 21%;
+  pointer-events: none;
   
 }
+
+.pet-details{
+    background: #ededed;
+    /* display: flex; */
+    padding: 45px 35px 45px 35px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, .05), 0 2px 8px 5px rgba(0, 0, 0, .09);
+    gap: 10px;
+    border-radius: 20px;
+    opacity: 21%;
+    pointer-events: none;
+
+  }
+
+  .pet-details-rendered{
+    background: white;
+    padding: 45px 35px 45px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, .05), 0 2px 8px 5px rgba(0, 0, 0, .09);
+    gap: 10px;
+    border-radius: 20px;
+    /* opacity: 21%;
+    pointer-events: none; */
+
+    & > ul{
+      display: flex;
+    flex-direction: column;
+    background: yellowgreen;
+    width: 100%;
+    padding: 0px;
+    gap: 14px;
+    margin-top: 0px;
+    }
+  }
+ .pet-card-input-list{
+  width: 100%;
+  margin-top: 0px;
+  padding: 0px;
+ }

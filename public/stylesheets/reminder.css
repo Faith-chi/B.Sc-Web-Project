@@ -1,12 +1,48 @@
 .reminder {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    padding: 50px 0px 10px 0px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 2px 8px 5px rgba(0, 0, 0, .09);
+    border-radius: 30px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    & > ul{      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+
+      & > li{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin: auto auto 45px auto;   
+      }
+    }
+  }
+
+  .table-th{
+    background: #e7e7e7;
   }
   
   .pet-card {
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+
   }
 
 
@@ -43,7 +79,7 @@
   .countdown {
     font-size: 2rem;
     text-align: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
 
   .time-container {
@@ -51,7 +87,6 @@
     flex-direction: column;
     /* justify-content: space-between; */
     align-items: center;
-
 
     & > span{
         font-size: 12px;

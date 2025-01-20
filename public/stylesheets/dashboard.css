@@ -2,6 +2,46 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: ; */
+}
+
+.nav-bar-links a{
+    text-decoration: none;
+    padding-right: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+}
+.nav-bar-links ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.rhs a{
+    text-decoration: none;
+    padding-right: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+}
+.rhs ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
 }
 
 .container {
@@ -41,11 +81,11 @@ body {
     width: 100%;
 }
 
-.side-4 {
+.user-profile {
     background-color: chartreuse;
     width: 100%;
     height: 50px;
-    margin-bottom: 20px;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -53,5 +93,59 @@ body {
 }
 
 .main-content-area {
-    
+    flex: 1;
+    padding: 20px;
+    background-color: #ffff;
+}
+
+.header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Space between the title and the button */
+        align-items: center;
+        margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.sign-up {
+    color: #fff;
+    background-color: #5C4033;
+    padding: 0.5rem 2rem;
+    border: 2px solid #FFA500;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.sign-up:hover {
+    background-color: #ee6516;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid blanchedalmond;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  th, td {
+    text-align: left;
+    border: 1px solid beige;
+    padding: 10px;
+  }
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+  } 
+
+.footer {
+    background-color: #5C4033;
+    /* position: absolute;
+    bottom: 10; */
+    /* left: 0; */
+    /* margin-top: 1rem; */
+    padding: 1rem;
 }
