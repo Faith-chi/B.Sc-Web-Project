@@ -10,3 +10,91 @@ th, td {
 th:nth-child(even) {
     background-color: #D6EEEE;
 }
+
+.footer {
+    background-color: #F7F3F1;
+    color: #5C4033;
+    position: absolute;
+    padding: 2rem;
+    width: 1440px; 
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: #5C4033 ;
+}
+
+.footer-logo i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #FF9A00; /* Match logo color */
+  }
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+
+
+.rfl {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Space between links */
+    padding: 0;
+    margin: 0;
+}
+
+.rfl li a {
+    text-decoration: none;
+    color: #5C4033;
+    font-size: 0.9rem;
+  }
+
+.lfl {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+
+     /* &> li {
+        padding: 0 20px ;
+    }  */
+}
+
+.lfl li a {
+    font-size: 1.2rem;
+    color: #5C4033;
+  }
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #5C4033;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.policy-links a {
+    text-decoration: none;
+    color: #5C4033;
+    margin-left: 1rem;
+  }
+  
+  .policy-links a:hover {
+    text-decoration: underline;
+  }
