@@ -196,10 +196,12 @@ button {
     border-radius: 20px;
 }
 
-h2 {
+/* h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
+  } */
+
+  
 
   section.features {
     display: flex;

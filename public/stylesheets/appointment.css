@@ -66,10 +66,191 @@ li {
     font-weight: 200;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 2rem auto;
+    max-width: 1200px;
+    gap: 2rem;
+  }
+  
+  /* Form Section */
+  .form-section {
+    background-color: #fff;
+    border: 2px dashed #c7b29a;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h2 {
+    text-align: center;
+    color: #5c4033;
+  }
+  
+  .form-section p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #c7b29a;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .symptoms-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .symptom {
+    background-color: #e7dfda;
+    border: 1px solid #c7b29a;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .symptom:hover,
+  .symptom.active {
+    background-color: #5c4033;
+    color: #fff;
+  }
+  
+  .next-button {
+    display: block;
+    width: 100%;
+    background-color: #5c4033;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .next-button:hover {
+    background-color: #7e5e48;
+  }
+  
+  /* Calendar Section */
+  .calendar-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-section label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  input[type="date"] {
+    display: block;
+    margin: 0 auto 1rem;
+    font-size: 1rem;
+  }
+  
+  .calendar-controls {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .calendar-controls button {
+    padding: 0.5rem 1rem;
+    background-color: #5c4033;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .calendar-controls button:hover {
+    background-color: #7e5e48;
+  }
+/* beginning of reminder container */
+  .reminder-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    padding: 20px;
+    width: 70%;
+    background-color: #f7f6f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reminder-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .reminder-form {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .time-select select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .repeat-options button,
+  .optional-section button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5C4033;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5C4033;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+/* end of added reminder container   */
+
 .footer {
     background-color: #F7F3F1;
     color: #5C4033;
-    position: absolute;
     padding: 2rem;
     width: 1440px; 
     text-align: center;

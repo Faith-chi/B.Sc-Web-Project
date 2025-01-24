@@ -144,7 +144,6 @@ tr:nth-child(even) {
   .footer {
     background-color: #F7F3F1;
     color: #5C4033;
-    position: absolute;
     padding: 2rem;
     width: 1440px; 
     text-align: center;

@@ -35,6 +35,102 @@
     </div>
     </div>
     </section>
+
+  <div class="container">
+    <!-- Form Section -->
+    <div class="form-section">
+      <h2>Pet Details</h2>
+      <p>Please fill out this form with the required information</p>
+      <form id="pet-details-form">
+        <div class="form-group">
+          <label for="pet-name">Name of Pet</label>
+          <input type="text" id="pet-name" placeholder="Enter pet name" />
+        </div>
+        <div class="form-group">
+          <label for="pet-age">Age of Pet</label>
+          <input type="text" id="pet-age" placeholder="Enter pet age" />
+        </div>
+        <div class="form-group">
+          <label for="pet-breed">Breed</label>
+          <input type="text" id="pet-breed" placeholder="Enter pet breed" />
+        </div>
+        <div class="form-group">
+          <label for="symptoms">Select Observable Symptoms</label>
+          <div class="symptoms-container">
+            <button type="button" class="symptom">Loss of Appetite</button>
+            <button type="button" class="symptom">Vomiting</button>
+            <button type="button" class="symptom">Sneezing</button>
+            <button type="button" class="symptom">Coughing</button>
+            <button type="button" class="symptom">Swelling</button>
+            <button type="button" class="symptom">Bad Breath</button>
+            <button type="button" class="symptom">Weight Loss</button>
+            <button type="button" class="symptom">Fatigue</button>
+          </div>
+        </div>
+        <button type="submit" class="next-button">Next</button>
+      </form>
+    </div>
+
+    <!-- Calendar Section -->
+    <div class="calendar-section">
+      <label for="date-picker">Date</label>
+      <input type="date" id="date-picker" />
+      <div class="calendar-controls">
+        <button id="prev-date">Previous</button>
+        <button id="next-date">Next</button>
+      </div>
+    </div>
+   
+<!--end of reminder section-->    
+  </div>
+
+   <!--try taking this div outside this div to check functionality-->
+   <div id="reminder-section" style="display: none;">
+    <div class="reminder-container">
+      <div class="reminder-image">
+        <img src="your-image-path.jpg" alt="Pet Reminder">
+      </div>
+      <div class="reminder-form">
+        <label for="time">Time:</label>
+        <div class="time-select">
+          <select id="hour">
+            <!-- Populate hours -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <!-- Continue for 12 -->
+          </select>
+          :
+          <select id="minute">
+            <!-- Populate minutes -->
+            <option value="00">00</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+          </select>
+          <select id="meridian">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+  
+        <div class="repeat-options">
+          <button id="daily">Daily</button>
+          <button id="weekly">Weekly</button>
+          <button id="monthly">Monthly</button>
+        </div>
+  
+        <div class="optional-section">
+          <button id="activate-reminder">Activate Reminder</button>
+        </div>
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../src//scripts/appointment.js"></script>
+
+
     <div class="footer">
         <div class="footer-logo">
             <i class="fa fa-paw"></i>
@@ -64,4 +160,4 @@
         </div>
     </div>
 </body>
-    </html>
+    
