@@ -25,7 +25,7 @@
             <ul>
                 <li><i class="fa fa-globe"></i><a>En</a></li>
                 <li><a href="#">contact sales</a></li>
-                <li><a href="#">log in</a></li>
+                <li><a href="login.html">log in</a></li>
                 <li>
                     <div class="signup">
                         <a href="createaccount.html" class="signup"> sign up free</a>
@@ -80,52 +80,53 @@
         <button id="next-date">Next</button>
       </div>
     </div>
-   
-<!--end of reminder section-->    
-  </div>
 
-   <!--try taking this div outside this div to check functionality-->
-   <div id="reminder-section" style="display: none;">
-    <div class="reminder-container">
-      <div class="reminder-image">
-        <img src="your-image-path.jpg" alt="Pet Reminder">
-      </div>
-      <div class="reminder-form">
-        <label for="time">Time:</label>
-        <div class="time-select">
-          <select id="hour">
-            <!-- Populate hours -->
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <!-- Continue for 12 -->
-          </select>
-          :
-          <select id="minute">
-            <!-- Populate minutes -->
-            <option value="00">00</option>
-            <option value="15">15</option>
-            <option value="30">30</option>
-            <option value="45">45</option>
-          </select>
-          <select id="meridian">
-            <option value="AM">AM</option>
-            <option value="PM">PM</option>
-          </select>
+    
+
+    <div id="reminder-section" class="show">
+      <div class="reminder-container">
+        <div class="reminder-image">
+          <img src="../assests/images/for-appointment.jpg" alt="Pet Reminder">
         </div>
-  
-        <div class="repeat-options">
-          <button id="daily">Daily</button>
-          <button id="weekly">Weekly</button>
-          <button id="monthly">Monthly</button>
+        <div class="reminder-form">
+          <label for="time">Time:</label>
+          <div class="time-select">
+            <select id="hour">
+              <!-- Populate hours -->
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <!-- Continue for 12 -->
+            </select>
+            :
+            <select id="minute">
+              <!-- Populate minutes -->
+              <option value="00">00</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+            </select>
+            <select id="meridian">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+    
+          <div class="repeat-options">
+            <button id="daily">Daily</button>
+            <button id="weekly">Weekly</button>
+            <button id="monthly">Monthly</button>
+          </div>
+    
+          <div class="optional-section">
+            <button id="activate-reminder">Activate Reminder</button>
+          </div>
+          <button class="submit-button" id="submit-button">Submit</button>
         </div>
-  
-        <div class="optional-section">
-          <button id="activate-reminder">Activate Reminder</button>
-        </div>
-        <button class="submit-button">Submit</button>
       </div>
     </div>
+   
+<!--end of reminder section-->    
   </div>
 
   <script src="../../src//scripts/appointment.js"></script>

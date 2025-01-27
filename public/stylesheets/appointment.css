@@ -65,13 +65,19 @@ li {
     text-decoration: none;
     font-weight: 200;
 }
-
+.hidden{
+  display: none;
+}
+.show{
+  display: flex;
+}
 .container {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    margin: 2rem auto;
-    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0px 20px;
+    /* max-width: 1200px; */
     gap: 2rem;
   }
   
@@ -81,7 +87,7 @@ li {
     border: 2px dashed #c7b29a;
     border-radius: 10px;
     padding: 2rem;
-    width: 40%;
+    width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -107,7 +113,7 @@ li {
   
   input[type="text"],
   input[type="date"] {
-    width: 100%;
+    width: 93%;
     padding: 0.8rem;
     border: 1px solid #c7b29a;
     border-radius: 5px;
@@ -171,6 +177,7 @@ li {
     display: block;
     margin: 0 auto 1rem;
     font-size: 1rem;
+    width: 95%;
   }
   
   .calendar-controls {
@@ -194,11 +201,12 @@ li {
 /* beginning of reminder container */
   .reminder-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     margin: 20px auto;
     padding: 20px;
-    width: 70%;
+    width: 89%;
     background-color: #f7f6f4;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
