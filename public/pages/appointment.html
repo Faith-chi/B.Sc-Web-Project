@@ -1,164 +1,172 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../stylesheets/appointment.css">
-    </head>
-    <body>
-        
-    
-<section>
-    <div id="nav-bar">
-        <div>
-            <ul>
-                <div class="nav-bar-links">
-                    <li><a href="homepage.html">Home</a></li>
-                    <li><a href="appointment.html">Appointment</a></li>
-                    <li><a href="reminder.html">Reminders</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="#">Health Resources</a></li>
-                </div>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../stylesheets/appointment.css" />
+  </head>
+  <body>
+    <script src="../../src//scripts/appointment.js"></script>
 
-            </ul>
+    <section>
+      <div id="nav-bar">
+        <div>
+          <ul>
+            <div class="nav-bar-links">
+              <li><a href="homepage.html">Home</a></li>
+              <li><a href="appointment.html">Appointment</a></li>
+              <li><a href="reminder.html">Reminders</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="#">Health Resources</a></li>
+            </div>
+          </ul>
         </div>
         <div class="rhs">
-            <ul>
-                <li><i class="fa fa-globe"></i><a>En</a></li>
-                <li><a href="#">contact sales</a></li>
-                <li><a href="login.html">log in</a></li>
-                <li>
-                    <div class="signup">
-                        <a href="createaccount.html" class="signup"> sign up free</a>
-                    </div>
-                </li>
-        </ul>
-    </div>
-    </div>
+          <ul>
+            <li><i class="fa fa-globe"></i><a>En</a></li>
+            <li><a href="#">contact sales</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li>
+              <div class="signup">
+                <a href="createaccount.html" class="signup"> sign up free</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-  <div class="container">
-    <!-- Form Section -->
-    <div class="form-section">
-      <h2>Pet Details</h2>
-      <p>Please fill out this form with the required information</p>
-      <form id="pet-details-form">
-        <div class="form-group">
-          <label for="pet-name">Name of Pet</label>
-          <input type="text" id="pet-name" placeholder="Enter pet name" />
-        </div>
-        <div class="form-group">
-          <label for="pet-age">Age of Pet</label>
-          <input type="text" id="pet-age" placeholder="Enter pet age" />
-        </div>
-        <div class="form-group">
-          <label for="pet-breed">Breed</label>
-          <input type="text" id="pet-breed" placeholder="Enter pet breed" />
-        </div>
-        <div class="form-group">
-          <label for="symptoms">Select Observable Symptoms</label>
-          <div class="symptoms-container">
-            <button type="button" class="symptom">Loss of Appetite</button>
-            <button type="button" class="symptom">Vomiting</button>
-            <button type="button" class="symptom">Sneezing</button>
-            <button type="button" class="symptom">Coughing</button>
-            <button type="button" class="symptom">Swelling</button>
-            <button type="button" class="symptom">Bad Breath</button>
-            <button type="button" class="symptom">Weight Loss</button>
-            <button type="button" class="symptom">Fatigue</button>
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-section">
+        <h2>Pet Details</h2>
+        <p>Please fill out this form with the required information</p>
+        <form id="pet-details-form">
+          <div class="form-group">
+            <label for="pet-name">Name of Pet</label>
+            <input type="text" id="pet-name" placeholder="Enter pet name" />
           </div>
-        </div>
-        <button type="submit" class="next-button">Next</button>
-      </form>
-    </div>
-
-    <!-- Calendar Section -->
-    <div class="calendar-section">
-      <label for="date-picker">Date</label>
-      <input type="date" id="date-picker" />
-      <div class="calendar-controls">
-        <button id="prev-date">Previous</button>
-        <button id="next-date">Next</button>
+          <div class="form-group">
+            <label for="pet-age">Age of Pet</label>
+            <input type="text" id="pet-age" placeholder="Enter pet age" />
+          </div>
+          <div class="form-group">
+            <label for="pet-breed">Breed</label>
+            <input type="text" id="pet-breed" placeholder="Enter pet breed" />
+          </div>
+          <div class="form-group">
+            <label for="symptoms">Select Observable Symptoms</label>
+            <div class="symptoms-container">
+              <button type="button" class="symptom">Loss of Appetite</button>
+              <button type="button" class="symptom">Vomiting</button>
+              <button type="button" class="symptom">Sneezing</button>
+              <button type="button" class="symptom">Coughing</button>
+              <button type="button" class="symptom">Swelling</button>
+              <button type="button" class="symptom">Bad Breath</button>
+              <button type="button" class="symptom">Weight Loss</button>
+              <button type="button" class="symptom">Fatigue</button>
+            </div>
+          </div>
+          <button type="submit" class="next-button">Next</button>
+        </form>
       </div>
-    </div>
 
-    
-
-    <div id="reminder-section" class="show">
-      <div class="reminder-container">
-        <div class="reminder-image">
-          <img src="../assests/images/for-appointment.jpg" alt="Pet Reminder">
-        </div>
-        <div class="reminder-form">
-          <label for="time">Time:</label>
-          <div class="time-select">
-            <select id="hour">
-              <!-- Populate hours -->
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <!-- Continue for 12 -->
-            </select>
-            :
-            <select id="minute">
-              <!-- Populate minutes -->
-              <option value="00">00</option>
-              <option value="15">15</option>
-              <option value="30">30</option>
-              <option value="45">45</option>
-            </select>
-            <select id="meridian">
-              <option value="AM">AM</option>
-              <option value="PM">PM</option>
-            </select>
-          </div>
-    
-          <div class="repeat-options">
-            <button id="daily">Daily</button>
-            <button id="weekly">Weekly</button>
-            <button id="monthly">Monthly</button>
-          </div>
-    
-          <div class="optional-section">
-            <button id="activate-reminder">Activate Reminder</button>
-          </div>
-          <button class="submit-button" id="submit-button">Submit</button>
+      <!-- Calendar Section -->
+      <div class="calendar-section">
+        <label for="date-picker">Date</label>
+        <input type="date" id="date-picker" />
+        <div class="calendar-controls">
+          <button id="prev-date">Previous</button>
+          <button id="next-date">Next</button>
         </div>
       </div>
+
+      <div id="reminder-section" class="show">
+        <div class="reminder-container">
+          <div class="reminder-image">
+            <img
+              src="../assests/images/for-appointment.jpg"
+              alt="Pet Reminder"
+            />
+          </div>
+          <div class="reminder-form">
+            <label for="time">Time:</label>
+            <div class="time-select">
+              <select id="hour">
+                <!-- Populate hours -->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!-- Continue for 12 -->
+              </select>
+              :
+              <select id="minute">
+                <!-- Populate minutes -->
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select>
+              <select id="meridian">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+
+            <div class="repeat-options">
+              <button id="daily">Daily</button>
+              <button id="weekly">Weekly</button>
+              <button id="monthly">Monthly</button>
+            </div>
+
+            <div class="optional-section">
+              <button id="activate-reminder">Activate Reminder</button>
+            </div>
+            <button class="submit-button" id="submit-button">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <!--end of reminder section-->
     </div>
-   
-<!--end of reminder section-->    
-  </div>
-
-  <script src="../../src//scripts/appointment.js"></script>
-
 
     <div class="footer">
-        <div class="footer-logo">
-            <i class="fa fa-paw"></i>
-            <span><a href="#">PetStore</a></span>
-        </div>
-        <div class="footer-links">
+      <div class="footer-logo">
+        <i class="fa fa-paw"></i>
+        <span><a href="#">PetStore</a></span>
+      </div>
+      <div class="footer-links">
         <ul class="rfl">
-            <li><a>Cidney Veterinary</a></li>
-            <li><a>Product</a></li>
-            <li><a>Community</a></li>
-            <li><a>For Teams</a></li>
-            <li><a>About Us</a></li>
+          <li><a>Cidney Veterinary</a></li>
+          <li><a>Product</a></li>
+          <li><a>Community</a></li>
+          <li><a>For Teams</a></li>
+          <li><a>About Us</a></li>
         </ul>
         <ul class="lfl">
-            <li><a><i class="fa fa-facebook"></i></a></li>
-            <li><a><i class="fa fa-instagram"></i></a></li>
-            <li><a><i class="fa fa-twitter"></i></a></li>
-            <li><a><i class="fa fa-tiktok"></i></a></li>
+          <li>
+            <a><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a><i class="fa fa-tiktok"></i></a>
+          </li>
         </ul>
+      </div>
+      <div class="footer-bottom">
+        <small>Copyright @ 2025, Faith Ifeanacho, All rights reserved</small>
+        <div class="policy-links">
+          <a href="#">Terms&Condition</a>
+          <a href="#">Privacy policy</a>
         </div>
-        <div class="footer-bottom">
-            <small>Copyright @ 2025, Faith Ifeanacho, All rights reserved</small> 
-            <div class="policy-links">
-            <a href="#">Terms&Condition</a>
-            <a href="#">Privacy policy</a>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
-    
+  </body>
+</html>
