@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,10 +7,67 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../stylesheets/appointment.css" />
+    <!-- <script src="../../src/scripts/appointment.js" type="module" defer></script> -->
   </head>
   <body>
-    <script src="../../src//scripts/appointment.js"></script>
+    <script type="module" >
 
+import { doc, setDoc, Timestamp } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js';
+import { db } from "../../src/scripts/firebase.js";
+// Form submit handler
+const handleFormSubmit = async (event) => {
+  event.preventDefault(); // Prevent page reload
+
+  // Extracting values from the form
+  const nameOfPetVal = document.getElementById('pet-name').value;
+  const ageOfPetVal = document.getElementById('pet-age').value;
+  const breedOfPetVal = document.getElementById('pet-breed').value;
+  const appointmentDateVal = new Date(document.getElementById('date-picker').value);
+
+  // Collect selected symptoms
+  const selectedSymptoms = [];
+  document.querySelectorAll(".symptom.selected").forEach(button => {
+    selectedSymptoms.push(button.textContent);
+  });
+
+  // Construct the docData object
+  const docData = {
+    nameOfPet: nameOfPetVal,
+    ageOfPet: ageOfPetVal,
+    breedOfPet: breedOfPetVal,
+    appointmentDate: Timestamp.fromDate(appointmentDateVal),
+    listOfSymptoms: selectedSymptoms,
+    id:Math.floor(Math.random()*1000)
+  };
+
+  console.log('docData', docData);
+
+  try {
+    // Assume db is initialized correctly
+    await setDoc(doc(db, "appointments/" + nameOfPetVal), docData);
+  
+    console.log("Document successfully written!");
+  } catch (error) {
+    console.error("Error writing document:", error);
+  }
+};
+
+// Attach event listener to form instead of button
+document.getElementById("pet-details-form").addEventListener("submit", handleFormSubmit);
+
+// Event listener for symptom buttons (toggle selection)
+document.querySelectorAll(".symptom").forEach(button => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("selected");
+  });
+});
+
+
+
+const SubmitAppointmentBtn = document.getElementById("submit-button");
+
+SubmitAppointmentBtn.addEventListener("click", handleFormSubmit)
+    </script>
     <section>
       <div id="nav-bar">
         <div>
@@ -125,6 +183,9 @@
               <button id="activate-reminder">Activate Reminder</button>
             </div>
             <button class="submit-button" id="submit-button">Submit</button>
+            <script>
+              
+            </script>
           </div>
         </div>
       </div>

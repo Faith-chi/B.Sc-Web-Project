@@ -17,7 +17,6 @@
                             <li><a href="dashboard.html">Dashboard</a></li>
                             <li><a href="#">Health Resources</a></li>
                         </div>
-    
                     </ul>
                 </div>
                 <div class="rhs">
@@ -30,388 +29,113 @@
                                 <a href="createaccount.html" class="signup"> sign up free</a>
                             </div>
                         </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-container">
+            <!-- Added the container with the ID appointments-container -->
+            <div id="appointments-container">
+                <!-- Pet cards will be dynamically added here by JavaScript -->
+                <ul>
+                    <li>
+                        <div class="pet-card" data-scheduled-date="December 12, 2025 16:00:00">
+                            <div class="pet-info">
+                                <table>
+                                    <tr class="table-th">
+                                        <th>Pet's Name</th>
+                                        <th>Breed</th>
+                                        <th>Scheduled Date</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Jimmy</td>
+                                        <td>Labrador Retriever</td>
+                                        <td>12th December 2025</td>
+                                        <td>4:00 PM</td>
+                                        <td><span class="status approved">Approved</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="symptoms">
+                                            <button>Loss of Appetite</button>
+                                            <button>Vomiting</button>
+                                            <button>Sneezing</button>
+                                            <button>Coughing</button>
+                                            <button>Swelling</button> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="countdown">
+                                <div class="parent">
+                                    <div class="time-container">
+                                        <span>Days</span>
+                                        <div class="countdown-time">
+                                            <span style="font-size: 70px;">00</span>
+                                        </div>
+                                    </div>
+                                    <span style="margin: auto;">:</span>
+                                    <div class="time-container">
+                                        <span>Hours</span>
+                                        <div class="countdown-time">
+                                            <span style="font-size: 70px;">00</span>
+                                        </div>
+                                    </div>
+                                    <span style="margin: auto;">:</span>
+                                    <div class="time-container">
+                                        <span>Minutes</span>
+                                        <div class="countdown-time">
+                                            <span style="font-size: 70px;">00</span>
+                                        </div>
+                                    </div>
+                                    <span style="margin: auto;">:</span>
+                                    <div class="time-container">
+                                        <span>Seconds</span>
+                                        <div class="countdown-time">
+                                            <span style="font-size: 70px;">00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Additional pet cards can go here as needed -->
                 </ul>
             </div>
+        </div>
+
+        <script type="module" src="../../src//scripts/reminder.js"></script>
+
+        <div class="footer">
+            <div class="footer-logo">
+                <i class="fa fa-paw"></i>
+                <span><a href="#">PetStore</a></span>
             </div>
-            </section>
-    
-    <div class="main-container">
-
-
-    <div class="reminder">
-        <ul>
-            <li>
-                <div class="pet-card" data-scheduled-date="December 12, 2025 16:00:00">
-                    <div class="pet-info">
-                        <table>
-                        <tr class="table-th">
-                            <th>Pet's Name</th>
-                            <th>Breed</th>
-                            <th>Scheduled Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>Jimmy</td>
-                            <td>Labrador Retriever</td>
-                            <td>12th December 2025</td>
-                            <td>4:00 PM</td>
-                            <td><span class="status approved">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="symptoms">
-                                <button>Loss of Appetite</button>
-                                <button>Vomiting</button>
-                                <button>Sneezing</button>
-                                <button>Coughing</button>
-                                <button>Swelling</button> 
-                            </td>
-                        </tr>
-                        </table>
-                    </div>
-
-                    <div class="countdown">
-                        <div class="parent">
-                            <div class="time-container">
-                                <span>Days</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Hours</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Minutes</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Seconds</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="footer-links">
+                <ul class="rfl">
+                    <li><a>Cidney Veterinary</a></li>
+                    <li><a>Product</a></li>
+                    <li><a>Community</a></li>
+                    <li><a>For Teams</a></li>
+                    <li><a>About Us</a></li>
+                </ul>
+                <ul class="lfl">
+                    <li><a><i class="fa fa-facebook"></i></a></li>
+                    <li><a><i class="fa fa-instagram"></i></a></li>
+                    <li><a><i class="fa fa-twitter"></i></a></li>
+                    <li><a><i class="fa fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <small>Copyright @ 2025, Faith Ifeanacho, All rights reserved</small> 
+                <div class="policy-links">
+                    <a href="#">Terms&Condition</a>
+                    <a href="#">Privacy policy</a>
                 </div>
-            </li>
-
-            
-            <li>
-                <div class="pet-card" data-scheduled-date="December 12, 2024 16:00:00">
-                    <div class="pet-info">
-                        <table>
-                        <tr class="table-th">
-                            <th>Pet's Name</th>
-                            <th>Breed</th>
-                            <th>Scheduled Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>Jimmy</td>
-                            <td>Labrador Retriever</td>
-                            <td>12th December 2024</td>
-                            <td>4:00 PM</td>
-                            <td><span class="status approved">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="symptoms">
-                                <button>Loss of Appetite</button>
-                                <button>Vomiting</button>
-                                <button>Sneezing</button>
-                                <button>Coughing</button>
-                                <button>Swelling</button> 
-                            </td>
-                        </tr>
-                        </table>
-                    </div>
-
-                    <div class="countdown">
-                        <div class="parent">
-                            <div class="time-container">
-                                <span>Days</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Hours</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Minutes</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Seconds</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            
-            <li>
-                <div class="pet-card" data-scheduled-date="December 12, 2024 16:00:00">
-                    <div class="pet-info">
-                        <table>
-                        <tr class="table-th">
-                            <th>Pet's Name</th>
-                            <th>Breed</th>
-                            <th>Scheduled Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>Jimmy</td>
-                            <td>Labrador Retriever</td>
-                            <td>12th December 2024</td>
-                            <td>4:00 PM</td>
-                            <td><span class="status approved">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="symptoms">
-                                <button>Loss of Appetite</button>
-                                <button>Vomiting</button>
-                                <button>Sneezing</button>
-                                <button>Coughing</button>
-                                <button>Swelling</button> 
-                            </td>
-                        </tr>
-                        </table>
-                    </div>
-
-                    <div class="countdown">
-                        <div class="parent">
-                            <div class="time-container">
-                                <span>Days</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Hours</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Minutes</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Seconds</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            
-            <li>
-                <div class="pet-card" data-scheduled-date="December 12, 2024 16:00:00">
-                    <div class="pet-info">
-                        <table>
-                        <tr class="table-th">
-                            <th>Pet's Name</th>
-                            <th>Breed</th>
-                            <th>Scheduled Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>Jimmy</td>
-                            <td>Labrador Retriever</td>
-                            <td>12th December 2024</td>
-                            <td>4:00 PM</td>
-                            <td><span class="status approved">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="symptoms">
-                                <button>Loss of Appetite</button>
-                                <button>Vomiting</button>
-                                <button>Sneezing</button>
-                                <button>Coughing</button>
-                                <button>Swelling</button> 
-                            </td>
-                        </tr>
-                        </table>
-                    </div>
-
-                    <div class="countdown">
-                        <div class="parent">
-                            <div class="time-container">
-                                <span>Days</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Hours</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Minutes</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            <span style="margin: auto;">:</span>
-                            <div class="time-container">
-                                <span>Seconds</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            
-            <li>
-                <div class="pet-card" data-scheduled-date="December 12, 2024 16:00:00">
-                    <div class="pet-info">
-                        <table>
-                        <tr class="table-th">
-                            <th>Pet's Name</th>
-                            <th>Breed</th>
-                            <th>Scheduled Date</th>
-                            <th>Time</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>Jimmy</td>
-                            <td>Labrador Retriever</td>
-                            <td>12th December 2024</td>
-                            <td>4:00 PM</td>
-                            <td><span class="status approved">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="symptoms">
-                                <button>Loss of Appetite</button>
-                                <button>Vomiting</button>
-                                <button>Sneezing</button>
-                                <button>Coughing</button>
-                                <button>Swelling</button> 
-                            </td>
-                        </tr>
-                        </table>
-                    </div>
-
-                    <div class="countdown">
-                        <div class="parent">
-                            <div class="time-container">
-                                <span>Days</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            :
-                            <div class="time-container">
-                                <span>Hours</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            :
-                            <div class="time-container">
-                                <span>Minutes</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                            :
-                            <div class="time-container">
-                                <span>Seconds</span>
-                                <div class="countdown-time">
-                                    <span style="font-size: 70px;">00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        
-    
-        <!-- <div class="symptoms">
-            <button>Loss of Appetite</button>
-            <button>Vomiting</button>
-            <button>Sneezing</button>
-            <button>Coughing</button>
-            <button>Swelling</button>
-        </div> -->
-    
-        
-        <!-- Duplicate this container for multiple pets -->
-    </div>
-    </div>
-
-    <script src="../../src//scripts/reminder.js"></script>
-
-    </div>
-    <div class="footer">
-        <div class="footer-logo">
-            <i class="fa fa-paw"></i>
-            <span><a href="#">PetStore</a></span>
-        </div>
-        <div class="footer-links">
-        <ul class="rfl">
-            <li><a>Cidney Veterinary</a></li>
-            <li><a>Product</a></li>
-            <li><a>Community</a></li>
-            <li><a>For Teams</a></li>
-            <li><a>About Us</a></li>
-        </ul>
-        <ul class="lfl">
-            <li><a><i class="fa fa-facebook"></i></a></li>
-            <li><a><i class="fa fa-instagram"></i></a></li>
-            <li><a><i class="fa fa-twitter"></i></a></li>
-            <li><a><i class="fa fa-tiktok"></i></a></li>
-        </ul>
-        </div>
-        <div class="footer-bottom">
-            <small>Copyright @ 2025, Faith Ifeanacho, All rights reserved</small> 
-            <div class="policy-links">
-            <a href="#">Terms&Condition</a>
-            <a href="#">Privacy policy</a>
             </div>
         </div>
-    </div>
-    </body> 
-   
-  </html>
-
-  
+    </body>
+</html>

@@ -164,7 +164,8 @@ li {
     color: #5C4033;
     position: absolute;
     padding: 2rem;
-    width: 1440px; 
+    max-width: 1220px;
+    width: 100%;
     text-align: center;
 }
 
