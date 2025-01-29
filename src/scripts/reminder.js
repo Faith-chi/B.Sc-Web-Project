@@ -1,21 +1,46 @@
-// Js for Symptom tags
+//fetch and display data in the reminder page
+const dashboardContainer = document.getElementById("dashboard-appointments");
 
-// Select all symptom buttons
-const symptomButtons = document.querySelectorAll(".symptoms button");
+const fetchAppointments = async () => {
+    try {
+        const querySnapshot = await getDocs(collection(db, "appointments"));
+        dashboardContainer.innerHTML = ""; // Clear existing content
 
-// Add click event listeners
-symptomButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    button.classList.toggle("selected");
-    if (button.classList.contains("selected")) {
-      button.style.backgroundColor = "#f88";
-      button.style.color = "#fff";
-    } else {
-      button.style.backgroundColor = "#f0f0f0";
-      button.style.color = "#000";
+        querySnapshot.forEach((doc) => {
+            const appointment = doc.data();
+            displayAppointment(appointment);
+        });
+    } catch (error) {
+        console.error("Error fetching appointments:", error);
     }
-  });
-});
+};
+
+const displayAppointment = (appointment) => {
+    const appointmentCard = document.createElement("div");
+    appointmentCard.classList.add("appointment-card");
+
+    appointmentCard.innerHTML = `
+        <div class="appointment-info">
+            <p><strong>Pet Name:</strong> ${appointment.petName}</p>
+            <p><strong>Breed:</strong> ${appointment.petBreed}</p>
+            <p><strong>Scheduled Date:</strong> ${appointment.appointmentDate}</p>
+            <p><strong>Time:</strong> ${appointment.appointmentTime}</p>
+            <p><strong>Status:</strong> <span class="status-${appointment.status.toLowerCase()}">${appointment.status}</span></p>
+        </div>
+        <div class="symptoms">
+            ${appointment.symptoms.map(symptom => `<span class="symptom-tag">${symptom}</span>`).join("")}
+        </div>
+        <div class="countdown" id="countdown-${appointment.petName.replace(/\s/g, '')}"></div>
+    `;
+
+    dashboardContainer.appendChild(appointmentCard);
+    startCountdown(appointment.appointmentDate, appointment.appointmentTime, `countdown-${appointment.petName.replace(/\s/g, '')}`);
+};
+
+// Fetch appointments on page load
+window.onload = fetchAppointments;
+
+============================
 
 
 // Js to handle multiple countdown timers

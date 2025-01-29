@@ -2,6 +2,7 @@ body {
     height: 100vh; /*vh = vertical height*/
     /* position: relative; */
     margin: 0;
+    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,7 +210,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
   }
 
@@ -247,12 +248,13 @@ button {
   }
 
   .img3 {
-    width: 496px;
-    height: 278px;
+    width: 340px;
+    height: 250px;
 }
 
 .details{
     flex: 2;
+    align-content: space-evenly;
 }
 
    .details-text p {
@@ -386,6 +388,7 @@ button {
     max-width: 50%;
     min-width: 50%;
     border-radius: 20px;
+    align-content: center;
 }
 
 .footer {
@@ -393,7 +396,7 @@ button {
     color: #5C4033;
     position: absolute;
     padding: 2rem;
-    width: 1440px; 
+    width: 1430px; 
     text-align: center;
 }
 
