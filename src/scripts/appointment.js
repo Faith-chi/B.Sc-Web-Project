@@ -19,7 +19,6 @@ symptomButtons.forEach((button) => {
 
 // // Get the "Next" button from the calendar section
 // const nextButton = document.getElementById('next-date');
-========================================================
 const appointmentForm = document.getElementById("pet-details-form");
 
 appointmentForm.addEventListener("submit", async (e) => {
@@ -56,7 +55,6 @@ appointmentForm.addEventListener("submit", async (e) => {
     }
 });
 
-=================================================================
 import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { v4 as uuidv4 } from 'uuid';
 

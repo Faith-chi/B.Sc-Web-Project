@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //fetch and display data in the reminder page
 const dashboardContainer = document.getElementById("dashboard-appointments");
 
@@ -41,8 +41,6 @@ const displayAppointment = (appointment) => {
 // Fetch appointments on page load
 window.onload = fetchAppointments;
 
-============================
-
 
 // Js to handle multiple countdown timers
 
@@ -72,7 +70,7 @@ function updateTimer(petCard) {
     clearInterval(petCard.timerInterval);
     petCard.querySelector(".countdown").innerText = "Time's Up!";
   }
-=======
+
 import {
   doc,
   getDocs,
@@ -113,9 +111,7 @@ function updateCountdown() {
       card.classList.add("expired"); // Add styling for expired appointments
     }
   });
->>>>>>> 4913b1fd3f590cafc929d2998294bdd4bfaf4f81
 }
-
 setInterval(updateCountdown, 1000);
 
 // Fetch all appointments and update UI in real-time
