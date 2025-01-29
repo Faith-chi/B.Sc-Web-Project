@@ -70,6 +70,7 @@ function updateTimer(petCard) {
     clearInterval(petCard.timerInterval);
     petCard.querySelector(".countdown").innerText = "Time's Up!";
   }
+}
 
 import {
   doc,
