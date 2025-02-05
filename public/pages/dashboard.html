@@ -3,34 +3,30 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="/stylesheets/dashboard.css">
+        <link rel="stylesheet" href="../stylesheets/dashboard.css">
     </head>
     <body>
-        <div class="container">
-        <aside class="sidebar">
-           <div class="side-1"> <h2>Pet Store</h2> </div>
-        <div class="side-2"><nav width="100%">
-                <ul>
-                    <li>Dashboard</li>
-                    <li>Reminder</li>
-                    <li>My Appointment</li>
-                    <li>My Profile</li>
-                </ul>
-            </nav>
+      <div id="nav-bar">
+        <div>
+            <ul>
+                <div class="nav-bar-links">
+                  <li><a href="homepage.html">Home</a></li>
+                  <li><a href="appointment.html">Appointment</a></li>
+                  <li><a href="reminder.html">Reminders</a></li>
+                  <li><a href="dashboard.html">Dashboard</a></li>
+                  <li><a href="#">Health Resources</a></li>
+                </div>
+            </ul>
         </div>
         <div class="rhs">
-          <ul>
-            <li><a href="#">contact sales</a></li>
-            <li><a href="login.html">log in</a></li>
-            <li>
-              <div class="signup">
-                <a href="createaccount.html" class="signup"> sign up free</a>
-              </div>
-            </li>
-          </ul>
+            <ul>
+                <li><i class="fa fa-globe"></i><a>En</a></li>
+                <li><a href="#">Contact Sales</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><button id="nav-signup" style="border-radius: 10px;">Sign Up Free</button></li>
+            </ul>
         </div>
-      </div>
-    </section>
+    </div>
     <div class="container">
       <aside class="sidebar">
         <div class="side-1"><i class="fa fa-paw"></i><h2>Pet Store</h2></div>
@@ -52,7 +48,6 @@
       <main class="main-content-area">
         <div class="header">
           <h1>My Dashboard</h1>
-          <a href="sign-up" class="sign-up">Create account</a>
         </div>
         <hr />
         <table>
