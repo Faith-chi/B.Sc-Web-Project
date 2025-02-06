@@ -52,6 +52,22 @@
         </div>
 
         <div class="form-container">
+          <form action="" id="login" class="login">
+            <div class="card-header">
+              <h2>User Details</h2>
+            </div>
+            <div class="forminputs">
+              <label for="email">Email</label><br>
+              <input type="email"><br>
+              <label for="password">Password</label><br>
+              <input type="password">
+            </div><br><br>
+            <div class="navigation-buttons">
+              <button type="button" id="prev">Previous</button>
+              <button type="button" id="next" onclick="nextBtnClick()" >Next</button>
+            </div>
+          </form>
+
           <form action="" id="createAccount" class="create-account">
             <div class="card-header">
               <h2>Create Account</h2>
@@ -114,7 +130,7 @@
             </div>
 
             <div class="navigation-buttons">
-              <button type="button" id="prev">Previous</button>
+              <button type="button" id="pet-prev" onclick="prevBtnClick()">Previous</button>
               <button type="button" id="next" onclick="nextBtnClick()" >Next</button>
             </div>            
             <script>

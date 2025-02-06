@@ -123,7 +123,7 @@ body {
   }
   
   .step.completed .label {
-    color: #27ae60;
+    color: #ae8327;
   }
   
   /* Highlight the completed section of the line */
@@ -140,7 +140,7 @@ body {
     padding: 20px;
 }
 
-.create-account, .pet-details {
+.create-account, .pet-details, .login {
     border: 1px;
     border-radius: 2px;
 }
@@ -153,6 +153,17 @@ h2 {
 
 input {
     width: 100%;
+}
+
+.login {
+    background: white;
+    display: flex;
+    padding: 45px 35px 45px 35px;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, .05), 0 2px 8px 5px rgba(0, 0, 0, .09);
+    border-radius: 20px;
 }
 
 .create-account {
