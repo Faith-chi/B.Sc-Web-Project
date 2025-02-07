@@ -7,7 +7,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../stylesheets/createaccount.css" />
-    <script src="../../src/scripts/createaccount.js"></script>
+    <script type="module" src="../../src/scripts/createaccount.js"></script>
+    <script>
+      function onlyOne(checkbox) {
+        const checkboxes = document.getElementsByName("accountType");
+        checkboxes.forEach((item) => {
+          if (item !== checkbox) item.checked = false;
+        });
+      }
+
+    </script>
   </head>
   <body>
     <div class="body-container">
@@ -55,23 +64,25 @@
         </div>
 
         <div class="form-container">
-          <form action="" id="login" class="login">
+          <section action="" id="login" class="login">
             <div class="card-header">
               <h2>User Details</h2>
             </div>
             <div class="forminputs">
               <label for="email">Email</label><br>
-              <input type="email"><br>
+              <input type="email" id="user-email"><br>
+
               <label for="password">Password</label><br>
-              <input type="password">
+              <input type="password" id="user-password">
             </div><br><br>
+
             <div class="navigation-buttons">
               <button type="button" id="prev">Previous</button>
-              <button type="button" id="next" onclick="nextBtnClick()" >Next</button>
+              <button type="button" id="next">Next</button>
             </div>
-          </form>
+          </section>
 
-          <form action="" id="createAccount" class="create-account">
+          <section  id="createAccount" class="create-account">
             <div class="card-header">
               <h2>Create Account</h2>
             </div>
@@ -108,9 +119,9 @@
                   <label for="breader-option"> I'm a Breader </label>
                   <input
                     type="checkbox"
-                    id="breader-option"
+                    id="breeder-option"
                     name="accountType"
-                    value="breaderPet"
+                    value="breederPet"
                     onclick="onlyOne(this)"
                   />
                 </li>
@@ -119,95 +130,11 @@
 
             <div class="navigation-buttons">
               <button type="button" id="prev">Previous</button>
-              <button type="button" id="next" onclick="nextBtnClick()" >Next</button>
-            </div>            
-            <script>
-              function onlyOne(checkbox) {
-                const checkboxes = document.getElementsByName("accountType");
-                checkboxes.forEach((item) => {
-                  if (item !== checkbox) item.checked = false;
-                });
-              }
+              <button type="button" id="next" >Next</button>
+            </div>   
+          </section>
 
-              function nextBtnClick() {
-                const nextButton = document.getElementById("next");
-                const createAccountCard =
-                  document.getElementById("createAccount");
-                const petDetailsCard = document.getElementById("petDetails");
-
-                // Event listeners for navigation buttons
-                //   if (currentStep < steps.length) {
-                //     currentStep++;
-                //     updateProgress();
-                //   }
-                createAccountCard.classList.replace(
-                  "create-account",
-                  "create-account-unrendered"
-                );
-                petDetailsCard.classList.replace(
-                  "pet-details",
-                  "pet-details-rendered"
-                );
-
-                console.log("sjwuihywkiowkjjn");
-              }
-
-              function prevBtnClick() {
-                const prevButton = document.getElementById("pet-prev");
-                const createAccountCard =
-                  document.getElementById("createAccount");
-                const petDetailsCard = document.getElementById("petDetails");
-
-                createAccountCard.classList.replace(
-                  "create-account-unrendered",
-                  "create-account"
-                );
-                petDetailsCard.classList.replace(
-                  "pet-details-rendered",
-                  "pet-details"
-                );
-              }
-
-              import { registerUser } from "./auth.js";
-
-              document.getElementById("submit-signup").addEventListener("click", async (event) => {
-                  event.preventDefault();
-
-                  const email = document.getElementById("email").value;
-                  const password = document.getElementById("password").value;
-                  const petName = document.getElementById("pet-name").value;
-                  const petBreed = document.getElementById("pet-breed").value;
-                  const petAge = document.getElementById("pet-age").value;
-
-                  // Check user type selections
-                  const userType = [];
-                  if (document.getElementById("single-pet").checked)
-                    userType.push("Single Pet Owner");
-                  if (document.getElementById("multiple-pets").checked)
-                    userType.push("Multiple Pet Owner");
-                  if (document.getElementById("breeder").checked)
-                    userType.push("Breeder");
-
-                  try {
-                    await registerUser(
-                      email,
-                      password,
-                      petName,
-                      petBreed,
-                      petAge,
-                      userType
-                    );
-                    alert("Sign-up successful!");
-                    window.location.href = "dashboard.html"; // Redirect after sign-up
-                  } catch (error) {
-                    console.error("Error signing up:", error);
-                    alert("Sign-up failed: " + error.message);
-                  }
-                });
-            </script>
-          </form>
-
-          <form action="" id="petDetails" class="pet-details">
+          <section id="petDetails" class="pet-details-rendered">
             <div class="pet-card-header">
               <h2>Pet Details</h2>
             </div>
@@ -236,16 +163,17 @@
             </div>
 
             <div class="navigation-buttons">
-              <button type="button" id="pet-prev" onclick="prevBtnClick()">
+              <button type="button" id="pet-prev">
                 Previous
               </button>
-              <button type="button" id="submit-signup">Next</button>
+              <button type="button" id="submit-signup">Sign Up</button>
             </div>
-          </form>
+          </section>
         </div>
       </section>
       <section class="footer"></section>
     </div>
+
     <div class="footer">
       <div class="footer-logo">
         <i class="fa fa-paw"></i>

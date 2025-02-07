@@ -23,21 +23,25 @@ const registerUser = async (
   userType
 ) => {
   try {
+    // ====== first signing in to check from the email if it exist ==========
+    await signInWithEmailAndPassword(auth, email, password);
+    
     // Create user with email & password
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       email,
       password
     );
-    const userId = userCredential.user.uid;
+    const user = userCredential.user;
 
     // Store user details in Firestore
-    await setDoc(doc(db, "users", userId), {
+    await setDoc(doc(db, "users", user.uid), {
       email: email,
       petName: petName,
       petBreed: petBreed,
       petAge: petAge,
       userType: userType, // Store account type
+      createdAt: new Date(),
     });
 
     console.log("User registered and data saved:", userCredential);
